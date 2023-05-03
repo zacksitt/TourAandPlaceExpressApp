@@ -13,7 +13,7 @@ app.get("/",(req,res) => {
 })
 
 //Place
-app.get("/places",placeCtrl.get)
+app.post("/places",placeCtrl.get)
 app.post("/places/tree",placeCtrl.getPlaceTree)
 app.get("/place/:id",placeCtrl.getPlace)
 app.post("/place",placeCtrl.createAndUpdate)
@@ -22,7 +22,7 @@ app.delete("/place/:id",placeCtrl.delete)
 app.post('/import-place-data',placeCtrl.importData)
 
 //Tour
-app.get("/tours",tourCtrl.get)
+app.post("/tours",tourCtrl.get)
 app.get("/tour/:id",tourCtrl.getTour)
 app.get("/tours/:place",tourCtrl.getTourByPlace)
 app.post("/tour",tourCtrl.createAndUpdate)

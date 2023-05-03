@@ -11,7 +11,9 @@ exports.get = async (req,res) => {
         let page    = req.body.page || 1;
         let limit   = req.body.limit || 10;
         let skip  = limit * (page - 1);
-        let places  = await Place.find({ skip, limit });
+        let places  = await Place.find()
+                            .limit(limit)
+                            .skip(skip);
 
         res.send({status:1,places})
     } catch (err) {
