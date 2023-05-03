@@ -1,4 +1,7 @@
 # TourAandPlaceExpressApp
+# Install
+
+npm install
 
 #Run App
 
